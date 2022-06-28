@@ -34,3 +34,34 @@ let state = {
     },
   ],
 }
+
+
+function renderStoreList(){
+let storeList=document.querySelector("item-list store--item-list")
+storeList?.textContent=''
+
+/* <li>
+  <div class="store--item-icon">
+    <img src="assets/icons/001-beetroot.svg" alt="beetroot" />
+  </div>
+  <button>Add to cart</button>
+</li> */
+
+let li=document.createElement('li')
+
+let storeDiv=document.createElement("div")
+storeDiv.className="store--item-icon"
+
+let storeImg=document.createElement('img')
+storeImg.src="assets/icons/001-beetroot.svg"
+
+let button=document.createElement('button')
+button.textContent="Add to cart"
+
+storeDiv.append(storeImg,button)
+
+li.append(storeDiv)
+
+storeList.append(li)
+
+}
